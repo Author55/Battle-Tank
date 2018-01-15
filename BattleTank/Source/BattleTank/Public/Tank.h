@@ -37,4 +37,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 100000; // TODO find sensible default
 
+	UFUNCTION(BlueprintCallable, Category = Setup)
+		void SetTurretReference(UTankTurret* TurretToSet);
+
 };
