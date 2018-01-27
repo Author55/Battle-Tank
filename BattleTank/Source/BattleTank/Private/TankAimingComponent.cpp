@@ -48,7 +48,7 @@ EFiringState UTankAimingComponent::GetFiringState() const
 	return FiringState;
 }
 
-int UTankAimingComponent::GetRoundsLeft() const
+int32 UTankAimingComponent::GetRoundsLeft() const
 {
 	return RoundsLeft;
 }
@@ -97,13 +97,13 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	
 	//Always yaw the shortest way
 	Barrel->Elevate(DeltaRotator.Pitch); 
-	if (FMath::Abs(DeltaRotator.Yaw + 30) < 180)
+	if (FMath::Abs(DeltaRotator.Yaw) < 180)
 	{
 		Turret->Rotate(DeltaRotator.Yaw);
 	}
 	else // Avoid going the long way round
 	{
-		Turret->Rotate(-DeltaRotator.Yaw + 30);
+		Turret->Rotate(-DeltaRotator.Yaw);
 	}
 }
 
