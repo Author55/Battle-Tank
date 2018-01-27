@@ -74,6 +74,4 @@ Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
-
-/Content/StarterContent/Textures
-/Content/StarterContent/HDRI
+BattleTank/Content/UI/tank.uasset
