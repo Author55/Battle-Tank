@@ -45,7 +45,6 @@ private:
 	UFUNCTION()
 	void OnPossessedTankDeath();
 
-
 public:
 
 	virtual void BeginPlay() override;

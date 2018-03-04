@@ -22,4 +22,12 @@ public:
 	virtual void BeginLoadingScreen(const FString& MapName);
 	UFUNCTION()
 	virtual void EndLoadingScreen(UWorld* InLoadedWorld);
+	// Reference UMG Asset in the Editor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	TSubclassOf<class UUserWidget> wLoadingWidget;
+
+private:
+
+	// Variable to hold the widget After Creating it.
+	UUserWidget* MyLoadWidget;
 };
